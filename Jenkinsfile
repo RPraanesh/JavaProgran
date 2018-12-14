@@ -5,7 +5,7 @@ pipeline {
 steps {
 checkout scm
    sh "yum install -y maven"
-   sh "maven clean install"
+   sh "mvn clean install"
 }
 }  
    stage ('Build') {
