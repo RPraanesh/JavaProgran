@@ -10,9 +10,8 @@ checkout scm
 }  
    stage ('Build') {
      steps {
-          archiveArtifacts artifacts: 'dist/sampleapp.zip'
-      
-    }
+          echo "HelloWorld"
+          }
   }
 }
 }
