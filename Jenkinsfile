@@ -1,10 +1,10 @@
 pipeline {
    agent any
    stages {
-   stage('Checkout') {
+   stage ('Checkout') {
 steps {
 dir('Java') {
-git credentialsId: 'GITHUB', url: 'https://github.com/RPraanesh/Java'
+git credentialsId: 'GITHUB', url: 'https://github.com/RPraanesh/JavaProgran'
 }
 }
 }
