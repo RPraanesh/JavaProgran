@@ -11,8 +11,8 @@ git credentialsId: 'GITHUB', url: 'https://github.com/RPraanesh/Java'
    stages {
    stage ('Build') {
      steps {
-    echo 'Running Build Automation '
-    sh './gradlew build --no-daemon'
+      sh "yum install -y maven"
+      sh "maven clean install"
     archiveArtifacts artifacts: 'dist/sampleapp.zip'
       }
     }
