@@ -7,13 +7,11 @@ checkout scm
    sh "yum install -y maven"
    sh "maven clean install"
 }
-}
-   stages {
+}  
    stage ('Build') {
      steps {
+          archiveArtifacts artifacts: 'dist/sampleapp.zip'
       
-    archiveArtifacts artifacts: 'dist/sampleapp.zip'
-      }
     }
   }
 }
