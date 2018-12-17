@@ -4,7 +4,7 @@ pipeline {
    stage ('Checkout') {
 steps {
 checkout scm
-   sh "yum install -y maven"
+   sh "sudo yum install -y maven"
    sh "mvn clean install"
 }
 }  
